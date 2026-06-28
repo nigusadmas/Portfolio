@@ -3,45 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>portfolio</title>
+    <title>Portfolio</title>
 
     <!-- SEO Meta Tags -->
     <meta
       name="description"
-      content="Professional portfolio of Nigus Admase, featuring modern web developments in React, Node.js, Python, Machine Learning, and bespoke user experiences."
+      content="Professional portfolio of Nigus Admas, featuring modern web developments in React, Node.js, Python, Machine Learning, and bespoke user experiences."
     />
     <meta
       name="keywords"
-      content="Nigus Admase, React Developer, Full Stack Developer, Python Developer, Data Scientist, AI Engineer, Portfolio"
+      content="Nigus Admas, React Developer, Full Stack Developer, Python Developer, Data Scientist, AI Engineer, Portfolio"
     />
-    <meta name="author" content="Nigus Admase" />
+    <meta name="author" content="Nigus Admas" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Nigus Admase | Developer Portfolio" />
+    <meta property="og:title" content="Nigus Admas | Developer Portfolio" />
     <meta
       property="og:description"
-      content="Professional portfolio of Nigus Admase, featuring modern web developments in React, Node.js, Python, Machine Learning, and bespoke user experiences."
-    />
-    <meta
-      property="og:image"
-      content="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&h=630&q=80"
+      content="Professional portfolio of Nigus Admas, featuring modern web developments in React, Node.js, Python, Machine Learning, and bespoke user experiences."
     />
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta
-      property="twitter:title"
-      content="Nigus Admase | Developer Portfolio"
-    />
-    <meta
-      property="twitter:description"
-      content="Professional portfolio of Nigus Admase, featuring modern web developments in React, Node.js, Python, Machine Learning, and bespoke user experiences."
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
 
-    <link rel="stylesheet" href="./css/style.css" />
-
-    <!-- Tailwind CSS (CDN for rapid production styles & utility setup) -->
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -59,16 +48,16 @@
       };
     </script>
 
-    <!-- Google Fonts -->
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    /> -->
-
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <link
+      rel="shortcut icon"
+      href="./assets/images/icons8-portfolio-48.png"
+      type="image/x-icon"
+    />
   </head>
   <body
     class="bg-darkBg text-slate-100 selection:bg-primary selection:text-white overflow-x-hidden transition-colors duration-300"
@@ -82,18 +71,18 @@
     <!-- Sticky Navigation Bar -->
     <nav
       id="navbar"
-      class="fixed top-0 left-0 w-full z-40 transition-all duration-300 py-5 px-6 lg:px-16 border-b border-transparent"
+      class="fixed top-0 left-0 w-full z-40 transition-all duration-300 py-5 px-6 lg:px-16 border-b border-transparent bg-darkBg/80 backdrop-blur-md"
     >
       <div class="max-w-7xl mx-auto flex items-center justify-between">
         <a href="#home" class="flex items-center gap-2 group">
           <div
-            class="w-10 h-10 rounded-xl bg-gradient-to-tr from-primary to-accent flex items-center justify-center text-white font-extrabold text-xl shadow-lg shadow-primary/20 transform group-hover:rotate-12"
+            class="w-10 h-10 rounded-xl bg-gradient-to-tr from-primary to-accent flex items-center justify-center text-white font-extrabold text-xl shadow-lg shadow-primary/20 transform group-hover:rotate-12 duration-300"
           >
             N
           </div>
           <span
-            class="font-display font-bold text-xl tracking-wide bg-gradient-to-r from-white to-slate-400 bg-clip-text text-transparent group-hover:from-primary group-hover:to-accent"
-            >Nigus Admas</span
+            class="font-display font-bold text-xl tracking-wide bg-gradient-to-r from-white to-slate-400 bg-clip-text text-transparent group-hover:from-primary group-hover:to-accent transition-all duration-300"
+            >Nigus</span
           >
         </a>
 
@@ -135,14 +124,11 @@
           <!-- Theme Toggle Button -->
           <button
             id="theme-toggle"
-            class="p-2.5 rounded-xl bg-slate-900/50 light:bg-slate-100 border border-slate-800 light:border-slate-200 hover:border-primary/50 text-slate-300 hover:text-white transition-all cursor-pointer"
+            class="p-2.5 rounded-xl bg-slate-900/50 border border-slate-800 hover:border-primary/50 text-slate-300 hover:text-white transition-all cursor-pointer"
             aria-label="Toggle Theme"
           >
-            <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
-            <i
-              data-lucide="moon"
-              class="w-5 h-5 block dark:hidden text-slate-700"
-            ></i>
+            <i data-lucide="sun" class="w-5 h-5 block dark:hidden"></i>
+            <i data-lucide="moon" class="w-5 h-5 hidden dark:block"></i>
           </button>
 
           <!-- Mobile Navigation Button -->
@@ -167,7 +153,7 @@
       <!-- Mobile Menu Panel -->
       <div
         id="mobile-menu"
-        class="hidden fixed inset-x-0 top-[73px] bg-darkBg/95 backdrop-blur-lg border-b border-slate-800/80 p-6 flex-col gap-4 animate-fade-in md:hidden"
+        class="hidden fixed inset-x-0 top-[73px] bg-darkBg/95 backdrop-blur-lg border-b border-slate-800/80 p-6 flex flex-col gap-4 md:hidden"
       >
         <a
           href="#home"
@@ -248,7 +234,7 @@
         class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center z-10 w-full"
       >
         <div
-          class="lg:col-span-7 flex flex-col items-start gap-6 text-left hero-section"
+          class="lg:col-span-7 flex flex-col items-start gap-6 text-left hero-section py-8"
         >
           <div
             class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-semibold uppercase tracking-wider"
@@ -265,7 +251,7 @@
             Hi, I'm
             <span
               class="bg-gradient-to-r from-primary via-blue-400 to-accent bg-clip-text text-transparent"
-              >Nigus Admase</span
+              >Nigus Admas</span
             >
           </h1>
 
@@ -276,20 +262,20 @@
             Professional
             <span
               id="typing-text"
-              class="text-accent font-semibold border-r-2 border-accent pr-1 animate-pulse"
+              class="text-accent font-semibold border-r-2 border-accent pr-1"
             ></span>
           </h2>
 
           <p
             class="text-base sm:text-lg text-slate-400 max-w-2xl leading-relaxed"
           >
-            Senior Full-Stack Engineer and AI system integrations designer.
+            Junior Full-Stack Engineer and AI system integrations designer.
             Building pixel-perfect, lightning-fast interfaces matched with
             high-fidelity analytical backend structures.
           </p>
 
           <!-- Action Button Grid -->
-          <div class="flex flex-wrap gap-4 mt-4 w-full sm:w-auto">
+          <div class="flex flex-wrap gap-4 mt-4 w-full sm:w-auto view-button">
             <a
               href="#projects"
               class="w-full sm:w-auto text-center inline-flex justify-center items-center gap-2 bg-gradient-to-r from-primary to-accent hover:opacity-95 text-white font-semibold px-8 py-4 rounded-2xl shadow-xl shadow-primary/25 hover:-translate-y-0.5 duration-200"
@@ -335,89 +321,28 @@
           </div>
         </div>
 
-        <!-- Interactive Code / System Analytics Panel (Replacing physical image) -->
-        <div
-          class="lg:col-span-5 flex justify-center items-center mt-12 lg:mt-0 relative w-full code-interactive"
-        >
-          <div
-            class="relative w-full max-w-md rounded-2xl overflow-hidden glass-panel border border-slate-800 shadow-2xl p-6 font-mono text-xs"
-          >
-            <div
-              class="flex items-center justify-between border-b border-slate-800/60 pb-3 mb-4"
-            >
-              <div class="flex items-center gap-1.5">
-                <span
-                  class="w-3 h-3 rounded-full bg-red-500/80 inline-block"
-                ></span>
-                <span
-                  class="w-3 h-3 rounded-full bg-yellow-500/80 inline-block"
-                ></span>
-                <span
-                  class="w-3 h-3 rounded-full bg-green-500/80 inline-block"
-                ></span>
-              </div>
-              <span class="text-slate-500 text-[10px] tracking-wider"
-                >nigus_admase_core.py</span
-              >
-            </div>
-            <div class="space-y-2.5 text-slate-300">
-              <p class="text-primary">
-                <span class="text-pink-500">import</span> tensorflow
-                <span class="text-pink-500">as</span> tf
-              </p>
-              <p class="text-primary">
-                <span class="text-pink-500">import</span> react_renderer
-                <span class="text-pink-500">as</span> rr
-              </p>
-              <p class="text-slate-500 text-[11px] italic">
-                # Initializing AI Analytical Pipelines
-              </p>
-              <p>
-                <span class="text-emerald-400">nigus_model</span> =
-                tf.keras.Sequential([
-              </p>
-              <p class="pl-4">
-                tf.keras.layers.Dense(<span class="text-amber-400">512</span>,
-                activation=<span class="text-cyan-400">'relu'</span>),
-              </p>
-              <p class="pl-4">
-                tf.keras.layers.Dropout(<span class="text-amber-400">0.2</span
-                >),
-              </p>
-              <p class="pl-4">
-                tf.keras.layers.Dense(<span class="text-amber-400">256</span>,
-                activation=<span class="text-cyan-400">'softmax'</span>)
-              </p>
-              <p>])</p>
-              <p class="text-slate-500 text-[11px] italic">
-                # Rendering premium responsive dashboards
-              </p>
-              <p>
-                <span class="text-pink-500">def</span>
-                <span class="text-yellow-400">render_experience</span>():
-              </p>
-              <p class="pl-4 text-emerald-400">
-                return rr.render(theme="dark", styling="glassmorphism")
-              </p>
-              <p class="text-slate-500 text-[11px] italic mt-2">
-                # System Health Status Check
-              </p>
-              <p class="text-cyan-400">
-                System.status()
-                <span class="text-slate-500">-> "PERFORMANCE_EXCELLENCE"</span>
-              </p>
-            </div>
+        <!-- Hero Graphic featuring the portrait image profile.jpg -->
+        <div class="lg:col-span-5 flex justify-center items-center w-full">
+          <div class="hero-image relative">
+            <img
+              src="./assets/images/profile p.png"
+              alt="Nigus Admas"
+              class="shadow-2xl shadow-primary/20 hover:scale-105 transition-all duration-500"
+              onerror="
+                this.src =
+                  'https://placehold.co/450x550/0f172a/ffffff?text=Nigus+Admas'
+              "
+            />
           </div>
-          <!-- Ambient outer glow behind interactive panel -->
-          <div
-            class="absolute -z-10 w-80 h-80 bg-primary/10 rounded-full blur-3xl"
-          ></div>
         </div>
       </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-24 px-6 relative bg-slate-950/40">
+    <section
+      id="about"
+      class="py-24 px-6 relative bg-slate-950/40 border-y border-slate-900"
+    >
       <div class="max-w-7xl mx-auto">
         <div class="text-center max-w-3xl mx-auto mb-16">
           <h2
@@ -431,15 +356,15 @@
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          <div class="lg:col-span-6 space-y-6">
+          <div class="lg:col-span-6 space-y-6 text-section">
             <h3 class="text-2xl font-bold font-display text-white">
               Full Stack Dev, Data Scientist & AI Architect
             </h3>
             <p class="text-slate-400 leading-relaxed">
               I am dedicated to crafting premium, production-ready interfaces
               and robust back-end systems that drive impact. My dual skill set
-              empowers me to combine the interactive beauty of **React 19**
-              developments with the complex architecture of **Python AI
+              empowers me to combine the interactive beauty of modern user
+              experiences with the complex architecture of **Python AI
               integrations and analytical dashboards**.
             </p>
             <p class="text-slate-400 leading-relaxed">
@@ -486,53 +411,85 @@
           </div>
 
           <!-- Numerical Statistics Panel -->
-          <div class="lg:col-span-6 grid grid-cols-2 gap-6">
+          <div class="lg:col-span-6 grid grid-cols-2 gap-6 number-section">
+            <!-- Experience -->
             <div
               class="p-6 rounded-2xl glass-panel text-center hover:border-primary/30 transition-all duration-300"
             >
               <span
                 class="text-4xl lg:text-5xl font-extrabold text-primary font-display block mb-2"
                 id="stat-exp"
-                >5+</span
+                >1+</span
               >
               <span class="text-sm font-semibold text-slate-300"
                 >Years of Experience</span
               >
             </div>
+
+            <!-- Projects -->
             <div
               class="p-6 rounded-2xl glass-panel text-center hover:border-primary/30 transition-all duration-300"
             >
               <span
                 class="text-4xl lg:text-5xl font-extrabold text-accent font-display block mb-2"
                 id="stat-projects"
-                >40+</span
+                >10+</span
               >
               <span class="text-sm font-semibold text-slate-300"
                 >Projects Completed</span
               >
             </div>
-            <div
-              class="p-6 rounded-2xl glass-panel text-center hover:border-primary/30 transition-all duration-300"
-            >
-              <span
-                class="text-4xl lg:text-5xl font-extrabold text-white font-display block mb-2"
-                id="stat-clients"
-                >100%</span
-              >
-              <span class="text-sm font-semibold text-slate-300"
-                >Happy Clients</span
-              >
-            </div>
+
+            <!-- GitHub Repositories -->
             <div
               class="p-6 rounded-2xl glass-panel text-center hover:border-primary/30 transition-all duration-300"
             >
               <span
                 class="text-4xl lg:text-5xl font-extrabold text-primary font-display block mb-2"
-                id="stat-tech"
+                id="stat-repositories"
                 >20+</span
               >
               <span class="text-sm font-semibold text-slate-300"
-                >Technologies Mastered</span
+                >GitHub Repositories</span
+              >
+            </div>
+            <!-- Certifications -->
+            <div
+              class="p-6 rounded-2xl glass-panel text-center hover:border-primary/30 transition-all duration-300"
+            >
+              <span
+                class="text-4xl lg:text-5xl font-extrabold text-white font-display block mb-2"
+                id="stat-certificates"
+                >4+</span
+              >
+              <span class="text-sm font-semibold text-slate-300"
+                >Certifications Earned</span
+              >
+            </div>
+
+            <div
+              class="p-6 rounded-2xl glass-panel text-center hover:border-primary/30 transition-all duration-300"
+            >
+              <span
+                class="text-4xl lg:text-5xl font-extrabold text-primary font-display block mb-2"
+                id="stat-repositories"
+                >95+</span
+              >
+              <span class="text-sm font-semibold text-slate-300"
+                >Client Satisfaction</span
+              >
+            </div>
+
+            <div
+              class="p-6 rounded-2xl glass-panel text-center hover:border-primary/30 transition-all duration-300"
+            >
+              <span
+                class="text-4xl lg:text-5xl font-extrabold text-primary font-display block mb-2"
+                id="stat-repositories"
+                >15+</span
+              >
+              <span class="text-sm font-semibold text-slate-300"
+                >Technologies Used</span
               >
             </div>
           </div>
@@ -588,7 +545,7 @@
           </button>
         </div>
 
-        <!-- Skill Grid -->
+        <!-- Skill Grid: Dynamically generated with absolute visual precision -->
         <div
           id="skills-grid"
           class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
@@ -599,7 +556,10 @@
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="py-24 px-6 relative bg-slate-950/40">
+    <section
+      id="services"
+      class="py-24 px-6 relative bg-slate-950/40 border-y border-slate-900"
+    >
       <div class="max-w-7xl mx-auto">
         <div class="text-center max-w-3xl mx-auto mb-16">
           <h2
@@ -625,16 +585,16 @@
             <h3 class="text-xl font-bold font-display text-white mb-3">
               Frontend Development
             </h3>
-            <p class="text-slate-400 text-sm leading-relaxed mb-4">
-              Delivering interactive, single-page application solutions using
-              React 19, TypeScript, and state architectures centered on
-              responsiveness and design fidelity.
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Delivering interactive, responsive single-page applications using
+              React, HTML/CSS, and modern state architectures with pixel-perfect
+              design.
             </p>
           </div>
 
           <!-- Service 2 -->
           <div
-            class="p-8 rounded-2xl glass-panel hover:border-primary/50 group transition-all duration-300"
+            class="p-8 rounded-2xl glass-panel hover:border-accent/50 group transition-all duration-300"
           >
             <div
               class="w-14 h-14 bg-accent/10 rounded-2xl flex items-center justify-center text-accent mb-6 group-hover:scale-110 duration-200"
@@ -644,10 +604,9 @@
             <h3 class="text-xl font-bold font-display text-white mb-3">
               Backend & Database Design
             </h3>
-            <p class="text-slate-400 text-sm leading-relaxed mb-4">
-              Building highly scalable backends with Node.js, Express, and
-              Python API structures. Structuring optimized relational and
-              non-relational database schemas.
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Building robust servers and scalable APIs using Node.js, Express,
+              and Django paired with SQL and NoSQL database schemas.
             </p>
           </div>
 
@@ -663,66 +622,9 @@
             <h3 class="text-xl font-bold font-display text-white mb-3">
               Data Science Dashboards
             </h3>
-            <p class="text-slate-400 text-sm leading-relaxed mb-4">
-              Synthesizing big data with Python, Pandas, NumPy, and Plotly/Dash.
-              Creating actionable visual suites optimized for immediate business
-              analysis.
-            </p>
-          </div>
-
-          <!-- Service 4 -->
-          <div
-            class="p-8 rounded-2xl glass-panel hover:border-accent/50 group transition-all duration-300"
-          >
-            <div
-              class="w-14 h-14 bg-accent/10 rounded-2xl flex items-center justify-center text-accent mb-6 group-hover:scale-110 duration-200"
-            >
-              <i data-lucide="cpu" class="w-8 h-8"></i>
-            </div>
-            <h3 class="text-xl font-bold font-display text-white mb-3">
-              AI & ML Implementations
-            </h3>
-            <p class="text-slate-400 text-sm leading-relaxed mb-4">
-              Training, hosting, and deploying standard regression and
-              classification AI workflows. Integrating LLM frameworks into
-              modern production websites.
-            </p>
-          </div>
-
-          <!-- Service 5 -->
-          <div
-            class="p-8 rounded-2xl glass-panel hover:border-primary/50 group transition-all duration-300"
-          >
-            <div
-              class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mb-6 group-hover:scale-110 duration-200"
-            >
-              <i data-lucide="zap" class="w-8 h-8"></i>
-            </div>
-            <h3 class="text-xl font-bold font-display text-white mb-3">
-              Performance Engineering
-            </h3>
-            <p class="text-slate-400 text-sm leading-relaxed mb-4">
-              Optimizing web applications for modern Lighthouse targets.
-              Minimizing paint latency, implementing aggressive caching, and
-              lazy pipelines.
-            </p>
-          </div>
-
-          <!-- Service 6 -->
-          <div
-            class="p-8 rounded-2xl glass-panel hover:border-accent/50 group transition-all duration-300"
-          >
-            <div
-              class="w-14 h-14 bg-accent/10 rounded-2xl flex items-center justify-center text-accent mb-6 group-hover:scale-110 duration-200"
-            >
-              <i data-lucide="shield" class="w-8 h-8"></i>
-            </div>
-            <h3 class="text-xl font-bold font-display text-white mb-3">
-              Consultation & Architecture
-            </h3>
-            <p class="text-slate-400 text-sm leading-relaxed mb-4">
-              Consulting on frontend system designs, tooling selections,
-              deployment infrastructures, and system testing architectures.
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Synthesizing data with Python, Pandas, and Matplotlib. Displaying
+              real-time analytical and custom metrics for smart decision making.
             </p>
           </div>
         </div>
@@ -734,55 +636,66 @@
       <div class="max-w-7xl mx-auto">
         <div class="text-center max-w-3xl mx-auto mb-16">
           <h2
-            class="text-3xl sm:text-4xl font-bold font-display text-white mb-4"
+            class="text-4xl font-extrabold font-display text-white mb-4 tracking-tight"
           >
-            Selected Works
+            Selected
+            <span
+              class="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent font-black"
+              >Works</span
+            >
           </h2>
+          <p class="text-slate-400 max-w-2xl mx-auto text-sm leading-relaxed">
+            A collection of projects that showcase my skills in full-stack
+            development, data science, AI/ML, and modern web technologies.
+          </p>
           <div
-            class="w-16 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded"
+            class="w-16 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded mt-5"
           ></div>
         </div>
 
         <!-- Category Filtering tabs -->
         <div class="flex flex-wrap justify-center gap-3 mb-12">
           <button
-            class="project-tab-btn active px-5 py-2 rounded-xl text-sm font-semibold bg-primary text-white duration-200"
+            class="project-tab-btn active px-6 py-2.5 rounded-xl text-sm font-semibold bg-primary text-white duration-200 shadow-lg shadow-primary/20"
             data-project-filter="all"
           >
             All Projects
           </button>
           <button
-            class="project-tab-btn px-5 py-2 rounded-xl text-sm font-semibold bg-slate-900 border border-slate-800 text-slate-400 hover:text-white duration-200"
+            class="project-tab-btn px-6 py-2.5 rounded-xl text-sm font-semibold bg-slate-900/60 border border-slate-800 text-slate-400 hover:text-white duration-200"
             data-project-filter="web"
           >
             Web Apps
           </button>
           <button
-            class="project-tab-btn px-5 py-2 rounded-xl text-sm font-semibold bg-slate-900 border border-slate-800 text-slate-400 hover:text-white duration-200"
+            class="project-tab-btn px-6 py-2.5 rounded-xl text-sm font-semibold bg-slate-900/60 border border-slate-800 text-slate-400 hover:text-white duration-200"
             data-project-filter="data"
           >
             Data & ML
           </button>
           <button
-            class="project-tab-btn px-5 py-2 rounded-xl text-sm font-semibold bg-slate-900 border border-slate-800 text-slate-400 hover:text-white duration-200"
+            class="project-tab-btn px-6 py-2.5 rounded-xl text-sm font-semibold bg-slate-900/60 border border-slate-800 text-slate-400 hover:text-white duration-200"
             data-project-filter="dash"
           >
             Dashboards
           </button>
         </div>
 
-        <!-- Project Grid -->
+        <!-- Project Grid: Rendered programmatically with high visual design fidelity -->
         <div
           id="projects-grid"
           class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
-          <!-- Injected programmatically by script logic below -->
+          <!-- Dynamic high fidelity mockup cards are rendered inside here -->
         </div>
       </div>
     </section>
 
     <!-- Experience Timeline Section -->
-    <section id="experience" class="py-24 px-6 relative bg-slate-950/40">
+    <section
+      id="experience"
+      class="py-24 px-6 relative bg-slate-950/40 border-y border-slate-900"
+    >
       <div class="max-w-3xl mx-auto">
         <div class="text-center mb-16">
           <h2
@@ -795,81 +708,81 @@
           ></div>
         </div>
 
-        <!-- Timeline wrapper -->
+        <!-- Timeline -->
         <div
           class="relative border-l-2 border-slate-800 ml-4 md:ml-6 space-y-12"
         >
-          <!-- Timeline item 1 -->
+          <!-- Current -->
           <div class="relative pl-8 group">
-            <!-- Dot icon indicator -->
             <div
               class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-primary border-4 border-slate-950 group-hover:bg-accent duration-200"
             ></div>
             <span
               class="text-xs uppercase tracking-wider font-semibold text-primary mb-1 block"
-              >Jan 2024 - Present</span
+              >2025 – Present</span
             >
             <h3
               class="text-xl font-bold font-display text-white group-hover:text-primary duration-150"
             >
-              Senior Full Stack Architect
+              Junior Full Stack Developer
             </h3>
             <p class="text-sm text-slate-400 mb-3">
-              Enterprise Tech Collaboratives (Remote)
+              Personal Projects & Freelance Development
             </p>
             <p class="text-slate-400 text-sm leading-relaxed">
-              Leading frontend execution tracks utilizing modern React, modular
-              components, and server architectures. Spearheading API creation
-              and custom dashboard development pipelines.
+              Building responsive and modern web applications using HTML, CSS,
+              JavaScript, Tailwind CSS, React, Python, and Django. Developing
+              REST APIs, integrating databases, and creating clean,
+              user-friendly interfaces.
             </p>
           </div>
 
-          <!-- Timeline item 2 -->
+          <!-- Internship -->
           <div class="relative pl-8 group">
-            <!-- Dot icon indicator -->
             <div
               class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-slate-700 border-4 border-slate-950 group-hover:bg-primary duration-200"
             ></div>
             <span
               class="text-xs uppercase tracking-wider font-semibold text-accent mb-1 block"
-              >Mar 2022 - Dec 2023</span
+              >2024 – 2025</span
             >
             <h3
               class="text-xl font-bold font-display text-white group-hover:text-accent duration-150"
             >
-              Lead Python & Frontend Specialist
+              IT Trainee
             </h3>
-            <p class="text-sm text-slate-400 mb-3">Global Solution Labs</p>
+            <p class="text-sm text-slate-400 mb-3">
+              Internship / Practical Training
+            </p>
             <p class="text-slate-400 text-sm leading-relaxed">
-              Engineered predictive analytics models for structured datasets
-              using Pandas, NumPy, and Scikit-Learn. Transformed raw logic
-              outputs into dynamic dashboards using Dash and Tailwind UI
-              structures.
+              Assisted in software installation, system maintenance, network
+              troubleshooting, and technical support. Worked with databases,
+              learned enterprise IT workflows, and collaborated with senior
+              developers.
             </p>
           </div>
 
-          <!-- Timeline item 3 -->
+          <!-- Learning -->
           <div class="relative pl-8 group">
-            <!-- Dot icon indicator -->
             <div
               class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-slate-700 border-4 border-slate-950 group-hover:bg-primary duration-200"
             ></div>
             <span
               class="text-xs uppercase tracking-wider font-semibold text-slate-500 mb-1 block"
-              >Jul 2020 - Feb 2022</span
+              >2023 – 2024</span
             >
             <h3
               class="text-xl font-bold font-display text-white group-hover:text-primary duration-150"
             >
-              IT System Specialist & Intern
+              Software Development Student
             </h3>
             <p class="text-sm text-slate-400 mb-3">
-              Informatics Engineering Services
+              Academic & Personal Learning
             </p>
             <p class="text-slate-400 text-sm leading-relaxed">
-              Maintained local database clusters, formulated SQL queries,
-              designed responsive landing platforms, and gained crucial hands-on
-              experience in production environments.
+              Built multiple academic and personal projects while learning
+              software engineering fundamentals, object-oriented programming,
+              database design, and version control.
             </p>
           </div>
         </div>
@@ -880,7 +793,7 @@
     <section class="py-24 px-6 relative">
       <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
         <!-- Education column -->
-        <div>
+        <div class="space-y-6">
           <h2
             class="text-2xl font-bold font-display text-white mb-8 flex items-center gap-2"
           >
@@ -894,13 +807,27 @@
                 >Bachelor of Science</span
               >
               <h3 class="text-lg font-bold text-white mb-2">
-                Computer Science & Engineering
+                Computer Science
+              </h3>
+              <p class="text-sm text-slate-400 mb-2">Debre Markos University</p>
+              <p class="text-xs text-slate-500">
+                Graduated with honors. Specialized studies in systems
+                architecture, software design, and database systems.
+              </p>
+            </div>
+            <div class="p-6 rounded-2xl glass-panel border border-slate-800">
+              <span
+                class="text-xs uppercase tracking-wider text-accent font-semibold block mb-1"
+                >Professional Training</span
+              >
+              <h3 class="text-lg font-bold text-white mb-2">
+                Data Science & AI Engineering
               </h3>
               <p class="text-sm text-slate-400 mb-2">Addis Ababa University</p>
               <p class="text-xs text-slate-500">
-                Graduated with high honors. Specialized studies in systems
-                architecture, software design, artificial intelligence
-                frameworks, and numerical calculus.
+                Focused training modules on neural networks, analytical
+                statistics, exploratory data structures, and pipeline
+                automation.
               </p>
             </div>
           </div>
@@ -920,11 +847,9 @@
             >
               <div>
                 <h3 class="text-sm font-bold text-white mb-1">
-                  Advanced React & State Architecture
+                  Full-Stack Web Development
                 </h3>
-                <p class="text-xs text-slate-500">
-                  Meta Professional Framework
-                </p>
+                <p class="text-xs text-slate-500">Evangadi Bootcamp</p>
               </div>
               <span class="text-xs text-primary font-semibold mt-4 block"
                 >Credential Verified</span
@@ -939,7 +864,7 @@
                   Deep Learning & Neural Networks
                 </h3>
                 <p class="text-xs text-slate-500">
-                  DeepLearning.AI Certificate
+                  DeepLearning AI Certificate
                 </p>
               </div>
               <span class="text-xs text-primary font-semibold mt-4 block"
@@ -952,9 +877,9 @@
             >
               <div>
                 <h3 class="text-sm font-bold text-white mb-1">
-                  Modern Python Data Analysis
+                  Android Fundamentals
                 </h3>
-                <p class="text-xs text-slate-500">Datacamp Verified Track</p>
+                <p class="text-xs text-slate-500">Udacity Verified Track</p>
               </div>
               <span class="text-xs text-primary font-semibold mt-4 block"
                 >Credential Verified</span
@@ -966,9 +891,34 @@
             >
               <div>
                 <h3 class="text-sm font-bold text-white mb-1">
-                  AWS Certified Solutions Associate
+                  Programming and AI Fundamental
                 </h3>
-                <p class="text-xs text-slate-500">Amazon Web Services</p>
+                <p class="text-xs text-slate-500">Udacity Bootcamp</p>
+              </div>
+              <span class="text-xs text-primary font-semibold mt-4 block"
+                >Credential Verified</span
+              >
+            </div>
+
+            <div
+              class="p-5 rounded-2xl bg-slate-950/50 border border-slate-800 flex flex-col justify-between"
+            >
+              <div>
+                <h3 class="text-sm font-bold text-white mb-1">IT Support</h3>
+                <p class="text-xs text-slate-500">Ruhama Short Term Training</p>
+              </div>
+              <span class="text-xs text-primary font-semibold mt-4 block"
+                >Credential Verified</span
+              >
+            </div>
+            <div
+              class="p-5 rounded-2xl bg-slate-950/50 border border-slate-800 flex flex-col justify-between"
+            >
+              <div>
+                <h3 class="text-sm font-bold text-white mb-1">
+                  Professional Training
+                </h3>
+                <p class="text-xs text-slate-500">Addis Ababa University</p>
               </div>
               <span class="text-xs text-primary font-semibold mt-4 block"
                 >Credential Verified</span
@@ -980,7 +930,10 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-24 px-6 relative bg-slate-950/40">
+    <section
+      id="contact"
+      class="py-24 px-6 relative bg-slate-950/40 border-t border-slate-900"
+    >
       <div class="max-w-7xl mx-auto">
         <div class="text-center max-w-3xl mx-auto mb-16">
           <h2
@@ -995,7 +948,7 @@
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
           <!-- Info cards column -->
-          <div class="lg:col-span-5 space-y-6">
+          <div class="lg:col-span-5 space-y-6 contact-me">
             <h3 class="text-2xl font-bold font-display text-white">
               Let's build something exceptional
             </h3>
@@ -1019,10 +972,11 @@
                     >Email Me</span
                   >
                   <a
-                    href="mailto:nigus@example.com"
+                    href="mailto:nigusadmas@gmail.com"
                     class="text-sm font-semibold text-white hover:text-accent duration-150"
-                    >nigus.admase@gmail.com</a
                   >
+                    nigusadmas@gmail.com
+                  </a>
                 </div>
               </div>
 
@@ -1039,6 +993,23 @@
                   >
                   <span class="text-sm font-semibold text-white"
                     >Addis Ababa, Ethiopia</span
+                  >
+                </div>
+              </div>
+
+              <div
+                class="p-5 rounded-2xl bg-slate-900/50 border border-slate-800 flex items-start gap-4"
+              >
+                <div class="p-3 bg-green-500/10 text-green-400 rounded-xl">
+                  <i data-lucide="phone" class="w-6 h-6"></i>
+                </div>
+                <div>
+                  <span
+                    class="text-xs text-slate-500 uppercase tracking-wider block"
+                    >Phone</span
+                  >
+                  <span class="text-sm font-semibold text-white"
+                    >+251-938-219719</span
                   >
                 </div>
               </div>
@@ -1118,7 +1089,7 @@
                 </button>
               </form>
 
-              <!-- Notification Box (replaces alert prompt limits) -->
+              <!-- Notification Box -->
               <div
                 id="form-response"
                 class="hidden mt-4 p-4 rounded-xl text-sm font-semibold transition-all duration-300"
@@ -1130,59 +1101,95 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-darkBg py-12 px-6 border-t border-slate-900">
+    <footer class="bg-darkBg border-t border-slate-900 py-8 px-6">
       <div
-        class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6"
+        class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-8"
       >
-        <div class="flex items-center gap-2">
-          <div
-            class="w-8 h-8 rounded-lg bg-gradient-to-tr from-primary to-accent flex items-center justify-center text-white font-extrabold text-lg"
-          >
-            N
-          </div>
-          <span class="font-display font-semibold text-lg text-white"
-            >Nigus Admase</span
-          >
-        </div>
-        <p class="text-xs text-slate-500">
-          &copy; 2026 Nigus Admase. Designed & Built with Vanilla Production
-          Stack.
-        </p>
+        <!-- Left -->
         <div class="flex items-center gap-4">
+          <!-- Profile Image -->
+          <img
+            src="assets/images/profile.jpg"
+            alt="Nigus Admas"
+            class="w-16 h-16 rounded-full object-cover border-2 border-slate-700 shadow-lg"
+          />
+
+          <!-- Name -->
+          <div>
+            <h3 class="text-xl font-bold text-white font-display">
+              Nigus Admas
+            </h3>
+            <p class="text-sm text-slate-400">Full-Stack Developer</p>
+          </div>
+        </div>
+
+        <!-- Center -->
+        <p class="text-center text-sm text-slate-500">
+          © 2026 Nigus Admas. Designed & Built with Full-Stack Portfolio Engine.
+        </p>
+
+        <!-- Right -->
+        <div class="flex items-center gap-3">
+          <!-- Github -->
+          <a
+            href="https://github.com/yourusername"
+            target="_blank"
+            class="w-12 h-12 rounded-xl border border-slate-700 bg-slate-900 hover:bg-primary hover:text-white transition flex items-center justify-center"
+          >
+            <i class="fa-brands fa-github text-xl"></i>
+          </a>
+
+          <!-- LinkedIn -->
+          <a
+            href="https://linkedin.com/in/yourusername"
+            target="_blank"
+            class="w-12 h-12 rounded-xl border border-slate-700 bg-slate-900 hover:bg-primary hover:text-white transition flex items-center justify-center"
+          >
+            <i class="fa-brands fa-linkedin-in text-xl"></i>
+          </a>
+
+          <!-- Telegram -->
+          <a
+            href="https://t.me/yourusername"
+            target="_blank"
+            class="w-12 h-12 rounded-xl border border-slate-700 bg-slate-900 hover:bg-primary hover:text-white transition flex items-center justify-center"
+          >
+            <i class="fa-brands fa-telegram text-xl"></i> </a
+          ><!-- Scroll to Top -->
           <a
             href="#home"
-            class="text-slate-400 hover:text-white p-2 rounded-lg bg-slate-950 border border-slate-900"
-            aria-label="Scroll back to top"
+            class="w-12 h-12 rounded-xl border border-slate-700 bg-slate-900 hover:bg-primary hover:border-primary transition-all duration-300 flex items-center justify-center text-slate-300 hover:text-white"
+            aria-label="Back to Top"
           >
-            <i data-lucide="arrow-up" class="w-4 h-4"></i>
+            <i data-lucide="arrow-up" class="w-5 h-5"></i>
           </a>
         </div>
       </div>
     </footer>
 
-    <!-- Single Immersive Project Detail Modal -->
+    <!-- Immersive Project Detail Modal -->
     <div
       id="project-modal"
-      class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-darkBg/80 backdrop-blur-md hidden animate-fade-in"
+      class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-darkBg/80 backdrop-blur-md hidden"
     >
       <div
-        class="relative w-full max-w-2xl bg-slate-950 border border-slate-850 rounded-3xl overflow-hidden shadow-2xl animate-zoom-in"
+        class="relative w-full max-w-2xl bg-slate-950 border border-slate-800 rounded-3xl overflow-hidden shadow-2xl"
       >
-        <!-- Modal Header Media Block -->
-        <div class="relative h-48 sm:h-64 w-full bg-slate-900">
-          <img
-            id="modal-img"
-            src=""
-            alt="Project view"
-            class="w-full h-full object-cover"
-          />
-          <button
-            id="modal-close-btn"
-            class="absolute top-4 right-4 p-2 rounded-full bg-slate-950/80 text-white hover:bg-slate-900 transition-colors cursor-pointer"
-            aria-label="Close Modal"
-          >
-            <i data-lucide="x" class="w-5 h-5"></i>
-          </button>
+        <!-- Close Button -->
+        <button
+          id="modal-close-btn"
+          class="absolute top-4 right-4 z-10 p-2 rounded-full bg-slate-950/80 text-white hover:bg-slate-900 border border-slate-800 transition-colors cursor-pointer"
+          aria-label="Close Modal"
+        >
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+
+        <!-- Graphic header mock inside modal -->
+        <div
+          id="modal-mock-container"
+          class="relative h-48 sm:h-56 w-full bg-slate-900/60 overflow-hidden flex items-center justify-center border-b border-slate-800"
+        >
+          <!-- Populated programmatically -->
         </div>
 
         <!-- Modal Body Content -->
