@@ -1,0 +1,1248 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="Professional portfolio of Nigus Admas, featuring modern web developments in React, Node.js, Python, Machine Learning, and bespoke user experiences."
+    />
+    <meta
+      name="keywords"
+      content="Nigus Admas, React Developer, Full Stack Developer, Python Developer, Data Scientist, AI Engineer, Portfolio"
+    />
+    <meta name="author" content="Nigus Admas" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Nigus Admas | Developer Portfolio" />
+    <meta
+      property="og:description"
+      content="Professional portfolio of Nigus Admas, featuring modern web developments in React, Node.js, Python, Machine Learning, and bespoke user experiences."
+    />
+
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#2563EB",
+              secondary: "#0F172A",
+              accent: "#06B6D4",
+              darkBg: "#020617",
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <link
+      rel="shortcut icon"
+      href="./assets/images/icons8-portfolio-48.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body
+    class="bg-darkBg text-slate-100 selection:bg-primary selection:text-white overflow-x-hidden transition-colors duration-300"
+  >
+    <!-- Scroll Progress Indicator -->
+    <div
+      id="scroll-progress"
+      class="fixed top-0 left-0 h-[3px] bg-gradient-to-r from-primary to-accent z-50 w-0 transition-all duration-75"
+    ></div>
+
+    <!-- Sticky Navigation Bar -->
+    <nav
+      id="navbar"
+      class="fixed top-0 left-0 w-full z-40 transition-all duration-300 py-5 px-6 lg:px-16 border-b border-transparent bg-darkBg/80 backdrop-blur-md"
+    >
+      <div class="max-w-7xl mx-auto flex items-center justify-between">
+        <a href="#home" class="flex items-center gap-2 group">
+          <div
+            class="w-10 h-10 rounded-xl bg-gradient-to-tr from-primary to-accent flex items-center justify-center text-white font-extrabold text-xl shadow-lg shadow-primary/20 transform group-hover:rotate-12 duration-300"
+          >
+            N
+          </div>
+          <span
+            class="font-display font-bold text-xl tracking-wide bg-gradient-to-r from-white to-slate-400 bg-clip-text text-transparent group-hover:from-primary group-hover:to-accent transition-all duration-300"
+            >Nigus</span
+          >
+        </a>
+
+        <!-- Desktop Nav Menu -->
+        <div class="hidden md:flex items-center gap-8">
+          <a
+            href="#home"
+            class="nav-link text-sm font-medium tracking-wide hover:text-accent duration-200"
+            >Home</a
+          >
+          <a
+            href="#about"
+            class="nav-link text-sm font-medium tracking-wide hover:text-accent duration-200"
+            >About</a
+          >
+          <a
+            href="#skills"
+            class="nav-link text-sm font-medium tracking-wide hover:text-accent duration-200"
+            >Skills</a
+          >
+          <a
+            href="#projects"
+            class="nav-link text-sm font-medium tracking-wide hover:text-accent duration-200"
+            >Projects</a
+          >
+          <a
+            href="#experience"
+            class="nav-link text-sm font-medium tracking-wide hover:text-accent duration-200"
+            >Experience</a
+          >
+          <a
+            href="#contact"
+            class="nav-link text-sm font-medium tracking-wide hover:text-accent duration-200"
+            >Contact Me</a
+          >
+        </div>
+
+        <div class="flex items-center gap-4">
+          <!-- Theme Toggle Button -->
+          <button
+            id="theme-toggle"
+            class="p-2.5 rounded-xl bg-slate-900/50 border border-slate-800 hover:border-primary/50 text-slate-300 hover:text-white transition-all cursor-pointer"
+            aria-label="Toggle Theme"
+          >
+            <i data-lucide="sun" class="w-5 h-5 block dark:hidden"></i>
+            <i data-lucide="moon" class="w-5 h-5 hidden dark:block"></i>
+          </button>
+
+          <!-- Mobile Navigation Button -->
+          <button
+            id="mobile-menu-btn"
+            class="md:hidden p-2.5 rounded-xl bg-slate-900/50 border border-slate-800 text-slate-300 hover:text-white hover:border-primary/50 cursor-pointer"
+            aria-label="Open Navigation"
+          >
+            <i data-lucide="menu" class="w-5 h-5"></i>
+          </button>
+
+          <!-- CTA Button -->
+          <a
+            href="#contact"
+            class="hidden lg:inline-flex items-center gap-2 bg-gradient-to-r from-primary to-accent hover:opacity-90 px-5 py-2.5 rounded-xl font-medium text-sm text-white shadow-lg shadow-primary/20 hover:shadow-primary/40 duration-300"
+          >
+            Hire Me <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Mobile Menu Panel -->
+      <div
+        id="mobile-menu"
+        class="hidden fixed inset-x-0 top-[73px] bg-darkBg/95 backdrop-blur-lg border-b border-slate-800/80 p-6 flex flex-col gap-4 md:hidden"
+      >
+        <a
+          href="#home"
+          class="mobile-nav-link text-lg py-2 border-b border-slate-800/50 text-slate-300"
+          >Home</a
+        >
+        <a
+          href="#about"
+          class="mobile-nav-link text-lg py-2 border-b border-slate-800/50 text-slate-300"
+          >About</a
+        >
+        <a
+          href="#skills"
+          class="mobile-nav-link text-lg py-2 border-b border-slate-800/50 text-slate-300"
+          >Skills</a
+        >
+        <a
+          href="#projects"
+          class="mobile-nav-link text-lg py-2 border-b border-slate-800/50 text-slate-300"
+          >Projects</a
+        >
+        <a
+          href="#experience"
+          class="mobile-nav-link text-lg py-2 border-b border-slate-800/50 text-slate-300"
+          >Experience</a
+        >
+        <a href="#contact" class="mobile-nav-link text-lg py-2 text-slate-300"
+          >Contact</a
+        >
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="relative min-h-screen flex items-center justify-center pt-32 pb-20 px-6 overflow-hidden"
+    >
+      <!-- Interactive Background Particles Graphic -->
+      <div class="absolute inset-0 z-0 opacity-30 pointer-events-none">
+        <div
+          class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[120px] animate-pulse"
+        ></div>
+        <div
+          class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/20 rounded-full blur-[120px] animate-pulse"
+        ></div>
+      </div>
+
+      <!-- Tech Bubble Grid Floaters -->
+      <div
+        class="absolute inset-0 pointer-events-none overflow-hidden hidden lg:block"
+      >
+        <div
+          class="float-item absolute top-[25%] left-[8%] glass-panel px-4 py-2.5 rounded-2xl flex items-center gap-2"
+          style="animation-delay: 0.2s"
+        >
+          <span
+            class="w-3 h-3 rounded-full bg-[#61DAFB] inline-block animate-ping"
+          ></span>
+          <span class="text-xs font-semibold">React Developer</span>
+        </div>
+        <div
+          class="float-item absolute top-[18%] right-[12%] glass-panel px-4 py-2.5 rounded-2xl flex items-center gap-2"
+          style="animation-delay: 1.5s"
+        >
+          <span class="w-3 h-3 rounded-full bg-[#3776AB] inline-block"></span>
+          <span class="text-xs font-semibold">Python Scientist</span>
+        </div>
+        <div
+          class="float-item absolute bottom-[30%] left-[10%] glass-panel px-4 py-2.5 rounded-2xl flex items-center gap-2"
+          style="animation-delay: 0.8s"
+        >
+          <span class="w-3 h-3 rounded-full bg-accent inline-block"></span>
+          <span class="text-xs font-semibold">AI Models Integration</span>
+        </div>
+      </div>
+
+      <div
+        class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center z-10 w-full"
+      >
+        <div
+          class="lg:col-span-7 flex flex-col items-start gap-6 text-left hero-section py-8"
+        >
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-semibold uppercase tracking-wider"
+          >
+            <span
+              class="w-2 h-2 rounded-full bg-primary inline-block animate-pulse"
+            ></span>
+            Open to Roles & Projects
+          </div>
+
+          <h2
+            class="text-4xl sm:text-5xl font-bold tracking-tight text-white font-display leading-tight span-text"
+          >
+            Hello, I'm
+            <span
+              class="bg-gradient-to-r from-primary via-blue-400 to-accent bg-clip-text text-transparent lg-text"
+              >Nigus Admas</span
+            >
+          </h2>
+
+          <!-- Typing Loop Element -->
+          <h3
+            class="text-xl sm:text-2xl lg:text-3xl font-medium text-slate-300 min-h-[40px]"
+          >
+            Professional
+            <span
+              id="typing-text"
+              class="text-accent font-semibold border-r-2 border-accent pr-1"
+            ></span>
+          </h3>
+
+          <p
+            class="text-base sm:text-lg text-slate-400 max-w-2xl leading-relaxed"
+          >
+            Junior Full-Stack Engineer and AI system integrations designer.
+            Building pixel-perfect, lightning-fast interfaces matched with
+            high-fidelity analytical backend structures.
+          </p>
+
+          <!-- Action Button Grid -->
+          <div class="flex flex-wrap gap-4 mt-4 w-full sm:w-auto view-button">
+            <a
+              href="#projects"
+              class="w-full sm:w-auto text-center inline-flex justify-center items-center gap-2 bg-gradient-to-r from-primary to-accent hover:opacity-95 text-white font-semibold px-8 py-4 rounded-2xl shadow-xl shadow-primary/25 hover:-translate-y-0.5 duration-200"
+            >
+              View Projects <i data-lucide="external-link" class="w-5 h-5"></i>
+            </a>
+            <button
+              onclick="downloadResume()"
+              class="w-full sm:w-auto text-center inline-flex justify-center items-center gap-2 bg-slate-900 border border-slate-800 hover:bg-slate-800/80 text-white font-semibold px-8 py-4 rounded-2xl hover:-translate-y-0.5 duration-200 cursor-pointer"
+            >
+              Download CV <i data-lucide="download" class="w-5 h-5"></i>
+            </button>
+          </div>
+
+          <!-- Animated Socials bar -->
+          <div class="flex items-center gap-6 mt-8">
+            <div class="flex gap-4">
+              <a
+                href="https://github.com"
+                target="_blank"
+                class="p-2 rounded-lg hover:bg-primary/20 text-slate-400 hover:text-white duration-200"
+                aria-label="GitHub Link"
+              >
+                <i data-lucide="github" class="w-5 h-5"></i>
+              </a>
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                class="p-2 rounded-lg hover:bg-primary/20 text-slate-400 hover:text-white duration-200"
+                aria-label="LinkedIn Link"
+              >
+                <i data-lucide="linkedin" class="w-5 h-5"></i>
+              </a>
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                class="p-2 rounded-lg hover:bg-primary/20 text-slate-400 hover:text-white duration-200"
+                aria-label="Twitter Link"
+              >
+                <i data-lucide="twitter" class="w-5 h-5"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Graphic featuring the portrait image profile.jpg -->
+        <div class="lg:col-span-5 flex justify-center items-center w-full">
+          <div class="hero-image relative">
+            <img
+              src="./assets/images/profile p.png"
+              alt="Nigus Admas"
+              class="shadow-2xl shadow-primary/20 hover:scale-105 transition-all duration-500"
+              onerror="
+                this.src =
+                  'https://placehold.co/450x550/0f172a/ffffff?text=Nigus+Admas'
+              "
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section
+      id="about"
+      class="py-24 px-6 relative bg-slate-950/40 border-y border-slate-900"
+    >
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2
+            class="text-3xl sm:text-4xl font-bold font-display text-white mb-4"
+          >
+            About Me
+          </h2>
+          <div
+            class="w-16 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded"
+          ></div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div class="lg:col-span-6 space-y-6 text-section">
+            <h3 class="text-2xl font-bold font-display text-white">
+              Full Stack Dev, Data Scientist & AI Architect
+            </h3>
+            <p class="text-slate-400 leading-relaxed">
+              I am dedicated to crafting premium, production-ready interfaces
+              and robust back-end systems that drive impact. My dual skill set
+              empowers me to combine the interactive beauty of modern user
+              experiences with the complex architecture of **Python AI
+              integrations and analytical dashboards**.
+            </p>
+            <p class="text-slate-400 leading-relaxed">
+              Whether engineering machine learning workflows, synthesizing
+              complex databases, or constructing high-fidelity user-facing
+              designs, my approach centers on performance, beautiful typography,
+              and accessible design principles.
+            </p>
+
+            <div class="grid grid-cols-2 gap-4 pt-4">
+              <div
+                class="p-4 rounded-xl bg-slate-900/50 border border-slate-800"
+              >
+                <span
+                  class="text-slate-500 text-xs uppercase tracking-wider block mb-1"
+                  >Location</span
+                >
+                <span class="text-white font-medium text-sm"
+                  >Addis Ababa, Ethiopia</span
+                >
+              </div>
+              <div
+                class="p-4 rounded-xl bg-slate-900/50 border border-slate-800"
+              >
+                <span
+                  class="text-slate-500 text-xs uppercase tracking-wider block mb-1"
+                  >Languages</span
+                >
+                <span class="text-white font-medium text-sm"
+                  >English, Amharic</span
+                >
+              </div>
+            </div>
+
+            <div class="pt-4">
+              <button
+                onclick="downloadResume()"
+                class="inline-flex items-center gap-2 bg-gradient-to-r from-primary to-accent hover:opacity-95 text-white font-semibold px-6 py-3.5 rounded-xl shadow-lg hover:-translate-y-0.5 duration-200 cursor-pointer"
+              >
+                Download My Full Resume
+                <i data-lucide="download" class="w-4 h-4"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Numerical Statistics Panel -->
+          <div class="lg:col-span-6 grid grid-cols-2 gap-6 number-section">
+            <!-- Experience -->
+            <div
+              class="p-6 rounded-2xl glass-panel text-center hover:border-primary/30 transition-all duration-300"
+            >
+              <span
+                class="text-4xl lg:text-5xl font-extrabold text-primary font-display block mb-2"
+                id="stat-exp"
+                >1+</span
+              >
+              <span class="text-sm font-semibold text-slate-300"
+                >Years of Experience</span
+              >
+            </div>
+
+            <!-- Projects -->
+            <div
+              class="p-6 rounded-2xl glass-panel text-center hover:border-primary/30 transition-all duration-300"
+            >
+              <span
+                class="text-4xl lg:text-5xl font-extrabold text-accent font-display block mb-2"
+                id="stat-projects"
+                >10+</span
+              >
+              <span class="text-sm font-semibold text-slate-300"
+                >Projects Completed</span
+              >
+            </div>
+
+            <!-- GitHub Repositories -->
+            <div
+              class="p-6 rounded-2xl glass-panel text-center hover:border-primary/30 transition-all duration-300"
+            >
+              <span
+                class="text-4xl lg:text-5xl font-extrabold text-primary font-display block mb-2"
+                id="stat-repositories"
+                >20+</span
+              >
+              <span class="text-sm font-semibold text-slate-300"
+                >GitHub Repositories</span
+              >
+            </div>
+            <!-- Certifications -->
+            <div
+              class="p-6 rounded-2xl glass-panel text-center hover:border-primary/30 transition-all duration-300"
+            >
+              <span
+                class="text-4xl lg:text-5xl font-extrabold text-white font-display block mb-2"
+                id="stat-certificates"
+                >4+</span
+              >
+              <span class="text-sm font-semibold text-slate-300"
+                >Certifications Earned</span
+              >
+            </div>
+
+            <div
+              class="p-6 rounded-2xl glass-panel text-center hover:border-primary/30 transition-all duration-300"
+            >
+              <span
+                class="text-4xl lg:text-5xl font-extrabold text-primary font-display block mb-2"
+                id="stat-repositories"
+                >95+</span
+              >
+              <span class="text-sm font-semibold text-slate-300"
+                >Client Satisfaction</span
+              >
+            </div>
+
+            <div
+              class="p-6 rounded-2xl glass-panel text-center hover:border-primary/30 transition-all duration-300"
+            >
+              <span
+                class="text-4xl lg:text-5xl font-extrabold text-primary font-display block mb-2"
+                id="stat-repositories"
+                >15+</span
+              >
+              <span class="text-sm font-semibold text-slate-300"
+                >Technologies Used</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-24 px-6 relative">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2
+            class="text-3xl sm:text-4xl font-bold font-display text-white mb-4"
+          >
+            Professional Skills
+          </h2>
+          <div
+            class="w-16 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded"
+          ></div>
+        </div>
+
+        <!-- Tab Filtering Options -->
+        <div class="flex flex-wrap justify-center gap-3 mb-12">
+          <button
+            class="skill-tab-btn active px-5 py-2.5 rounded-xl text-sm font-semibold bg-primary text-white duration-200"
+            data-filter="all"
+          >
+            All Skills
+          </button>
+          <button
+            class="skill-tab-btn px-5 py-2.5 rounded-xl text-sm font-semibold bg-slate-900 border border-slate-800 text-slate-400 hover:text-white duration-200"
+            data-filter="frontend"
+          >
+            Frontend
+          </button>
+          <button
+            class="skill-tab-btn px-5 py-2.5 rounded-xl text-sm font-semibold bg-slate-900 border border-slate-800 text-slate-400 hover:text-white duration-200"
+            data-filter="backend"
+          >
+            Backend & DB
+          </button>
+          <button
+            class="skill-tab-btn px-5 py-2.5 rounded-xl text-sm font-semibold bg-slate-900 border border-slate-800 text-slate-400 hover:text-white duration-200"
+            data-filter="data"
+          >
+            Data Science & AI
+          </button>
+          <button
+            class="skill-tab-btn px-5 py-2.5 rounded-xl text-sm font-semibold bg-slate-900 border border-slate-800 text-slate-400 hover:text-white duration-200"
+            data-filter="tools"
+          >
+            Tools
+          </button>
+        </div>
+
+        <!-- Skill Grid: Dynamically generated with absolute visual precision -->
+        <div
+          id="skills-grid"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+        >
+          <!-- Javascript Generated Skill Blocks will inject here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section
+      id="services"
+      class="py-24 px-6 relative bg-slate-950/40 border-y border-slate-900"
+    >
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2
+            class="text-3xl sm:text-4xl font-bold font-display text-white mb-4"
+          >
+            Core Services
+          </h2>
+          <div
+            class="w-16 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded"
+          ></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Service 1 -->
+          <div
+            class="p-8 rounded-2xl glass-panel hover:border-primary/50 group transition-all duration-300"
+          >
+            <div
+              class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mb-6 group-hover:scale-110 duration-200"
+            >
+              <i data-lucide="layout" class="w-8 h-8"></i>
+            </div>
+            <h3 class="text-xl font-bold font-display text-white mb-3">
+              Frontend Development
+            </h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Delivering interactive, responsive single-page applications using
+              React, HTML/CSS, and modern state architectures with pixel-perfect
+              design.
+            </p>
+          </div>
+
+          <!-- Service 2 -->
+          <div
+            class="p-8 rounded-2xl glass-panel hover:border-accent/50 group transition-all duration-300"
+          >
+            <div
+              class="w-14 h-14 bg-accent/10 rounded-2xl flex items-center justify-center text-accent mb-6 group-hover:scale-110 duration-200"
+            >
+              <i data-lucide="server" class="w-8 h-8"></i>
+            </div>
+            <h3 class="text-xl font-bold font-display text-white mb-3">
+              Backend & Database Design
+            </h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Building robust servers and scalable APIs using Node.js, Express,
+              and Django paired with SQL and NoSQL database schemas.
+            </p>
+          </div>
+
+          <!-- Service 3 -->
+          <div
+            class="p-8 rounded-2xl glass-panel hover:border-primary/50 group transition-all duration-300"
+          >
+            <div
+              class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mb-6 group-hover:scale-110 duration-200"
+            >
+              <i data-lucide="pie-chart" class="w-8 h-8"></i>
+            </div>
+            <h3 class="text-xl font-bold font-display text-white mb-3">
+              Data Science Dashboards
+            </h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Synthesizing data with Python, Pandas, and Matplotlib. Displaying
+              real-time analytical and custom metrics for smart decision making.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 px-6 relative">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2
+            class="text-4xl font-extrabold font-display text-white mb-4 tracking-tight"
+          >
+            Selected
+            <span
+              class="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent font-black"
+              >Works</span
+            >
+          </h2>
+          <p class="text-slate-400 max-w-2xl mx-auto text-sm leading-relaxed">
+            A collection of projects that showcase my skills in full-stack
+            development, data science, AI/ML, and modern web technologies.
+          </p>
+          <div
+            class="w-16 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded mt-5"
+          ></div>
+        </div>
+
+        <!-- Category Filtering tabs -->
+        <div class="flex flex-wrap justify-center gap-3 mb-12">
+          <button
+            class="project-tab-btn active px-6 py-2.5 rounded-xl text-sm font-semibold bg-primary text-white duration-200 shadow-lg shadow-primary/20"
+            data-project-filter="all"
+          >
+            All Projects
+          </button>
+          <button
+            class="project-tab-btn px-6 py-2.5 rounded-xl text-sm font-semibold bg-slate-900/60 border border-slate-800 text-slate-400 hover:text-white duration-200"
+            data-project-filter="web"
+          >
+            Web Apps
+          </button>
+          <button
+            class="project-tab-btn px-6 py-2.5 rounded-xl text-sm font-semibold bg-slate-900/60 border border-slate-800 text-slate-400 hover:text-white duration-200"
+            data-project-filter="data"
+          >
+            Data & ML
+          </button>
+          <button
+            class="project-tab-btn px-6 py-2.5 rounded-xl text-sm font-semibold bg-slate-900/60 border border-slate-800 text-slate-400 hover:text-white duration-200"
+            data-project-filter="dash"
+          >
+            Dashboards
+          </button>
+        </div>
+
+        <!-- Project Grid: Rendered programmatically with high visual design fidelity -->
+        <div
+          id="projects-grid"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
+          <!-- Dynamic high fidelity mockup cards are rendered inside here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Timeline Section -->
+    <section
+      id="experience"
+      class="py-24 px-6 relative bg-slate-950/40 border-y border-slate-900"
+    >
+      <div class="max-w-3xl mx-auto">
+        <div class="text-center mb-16">
+          <h2
+            class="text-3xl sm:text-4xl font-bold font-display text-white mb-4"
+          >
+            Career Journey
+          </h2>
+          <div
+            class="w-16 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded"
+          ></div>
+        </div>
+
+        <!-- Timeline -->
+        <div
+          class="relative border-l-2 border-slate-800 ml-4 md:ml-6 space-y-12"
+        >
+          <!-- Current -->
+          <div class="relative pl-8 group">
+            <div
+              class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-primary border-4 border-slate-950 group-hover:bg-accent duration-200"
+            ></div>
+            <span
+              class="text-xs uppercase tracking-wider font-semibold text-primary mb-1 block"
+              >2025 – Present</span
+            >
+            <h3
+              class="text-xl font-bold font-display text-white group-hover:text-primary duration-150"
+            >
+              Intermidate Full Stack Developer
+            </h3>
+            <p class="text-sm text-slate-400 mb-3">
+              Personal Projects & Freelance Development
+            </p>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Building responsive and modern web applications using HTML, CSS,
+              JavaScript, Tailwind CSS, React, Python, and Django. Developing
+              REST APIs, integrating databases, and creating clean,
+              user-friendly interfaces.
+            </p>
+          </div>
+
+          <!-- Internship -->
+          <div class="relative pl-8 group">
+            <div
+              class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-slate-700 border-4 border-slate-950 group-hover:bg-primary duration-200"
+            ></div>
+            <span
+              class="text-xs uppercase tracking-wider font-semibold text-accent mb-1 block"
+              >2024 – 2025</span
+            >
+            <h3
+              class="text-xl font-bold font-display text-white group-hover:text-accent duration-150"
+            >
+              IT Trainee
+            </h3>
+            <p class="text-sm text-slate-400 mb-3">
+              Internship / Practical Training
+            </p>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Assisted in software installation, system maintenance, network
+              troubleshooting, and technical support. Worked with databases,
+              learned enterprise IT workflows, and collaborated with senior
+              developers.
+            </p>
+          </div>
+
+          <!-- Learning -->
+          <div class="relative pl-8 group">
+            <div
+              class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-slate-700 border-4 border-slate-950 group-hover:bg-primary duration-200"
+            ></div>
+            <span
+              class="text-xs uppercase tracking-wider font-semibold text-slate-500 mb-1 block"
+              >2023 – 2024</span
+            >
+            <h3
+              class="text-xl font-bold font-display text-white group-hover:text-primary duration-150"
+            >
+              Software Development Student
+            </h3>
+            <p class="text-sm text-slate-400 mb-3">
+              Academic & Personal Learning
+            </p>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Built multiple academic and personal projects while learning
+              software engineering fundamentals, object-oriented programming,
+              database design, and version control.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education & Certificates Grid -->
+    <section class="py-24 px-6 relative">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <!-- Education column -->
+        <div class="space-y-6">
+          <h2
+            class="text-2xl font-bold font-display text-white mb-8 flex items-center gap-2"
+          >
+            <i data-lucide="graduation-cap" class="text-primary w-6 h-6"></i>
+            Education
+          </h2>
+          <div class="space-y-6">
+            <div class="p-6 rounded-2xl glass-panel border border-slate-800">
+              <span
+                class="text-xs uppercase tracking-wider text-accent font-semibold block mb-1"
+                >Bachelor of Science</span
+              >
+              <h3 class="text-lg font-bold text-white mb-2">
+                Computer Science
+              </h3>
+              <p class="text-sm text-slate-400 mb-2">Debre Markos University</p>
+              <p class="text-xs text-slate-500">
+                Graduated with honors. Specialized studies in systems
+                architecture, software design, and database systems.
+              </p>
+            </div>
+            <div class="p-6 rounded-2xl glass-panel border border-slate-800">
+              <span
+                class="text-xs uppercase tracking-wider text-accent font-semibold block mb-1"
+                >Professional Training</span
+              >
+              <h3 class="text-lg font-bold text-white mb-2">
+                Data Science & AI Engineering
+              </h3>
+              <p class="text-sm text-slate-400 mb-2">Addis Ababa University</p>
+              <p class="text-xs text-slate-500">
+                Focused training modules on neural networks, analytical
+                statistics, exploratory data structures, and pipeline
+                automation.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certificates column -->
+        <div>
+          <h2
+            class="text-2xl font-bold font-display text-white mb-8 flex items-center gap-2"
+          >
+            <i data-lucide="award" class="text-accent w-6 h-6"></i> Key
+            Certifications
+          </h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div
+              class="p-5 rounded-2xl bg-slate-950/50 border border-slate-800 flex flex-col justify-between"
+            >
+              <div>
+                <h3 class="text-sm font-bold text-white mb-1">
+                  Full-Stack Web Development
+                </h3>
+                <p class="text-xs text-slate-500">Evangadi Bootcamp</p>
+              </div>
+              <span class="text-xs text-primary font-semibold mt-4 block"
+                >Credential Verified</span
+              >
+            </div>
+
+            <div
+              class="p-5 rounded-2xl bg-slate-950/50 border border-slate-800 flex flex-col justify-between"
+            >
+              <div>
+                <h3 class="text-sm font-bold text-white mb-1">
+                  Deep Learning & Neural Networks
+                </h3>
+                <p class="text-xs text-slate-500">
+                  DeepLearning AI Certificate
+                </p>
+              </div>
+              <span class="text-xs text-primary font-semibold mt-4 block"
+                >Credential Verified</span
+              >
+            </div>
+
+            <div
+              class="p-5 rounded-2xl bg-slate-950/50 border border-slate-800 flex flex-col justify-between"
+            >
+              <div>
+                <h3 class="text-sm font-bold text-white mb-1">
+                  Android Fundamentals
+                </h3>
+                <p class="text-xs text-slate-500">Udacity Verified Track</p>
+              </div>
+              <span class="text-xs text-primary font-semibold mt-4 block"
+                >Credential Verified</span
+              >
+            </div>
+
+            <div
+              class="p-5 rounded-2xl bg-slate-950/50 border border-slate-800 flex flex-col justify-between"
+            >
+              <div>
+                <h3 class="text-sm font-bold text-white mb-1">
+                  Programming and AI Fundamental
+                </h3>
+                <p class="text-xs text-slate-500">Udacity Bootcamp</p>
+              </div>
+              <span class="text-xs text-primary font-semibold mt-4 block"
+                >Credential Verified</span
+              >
+            </div>
+
+            <div
+              class="p-5 rounded-2xl bg-slate-950/50 border border-slate-800 flex flex-col justify-between"
+            >
+              <div>
+                <h3 class="text-sm font-bold text-white mb-1">IT Support</h3>
+                <p class="text-xs text-slate-500">Ruhama Short Term Training</p>
+              </div>
+              <span class="text-xs text-primary font-semibold mt-4 block"
+                >Credential Verified</span
+              >
+            </div>
+            <div
+              class="p-5 rounded-2xl bg-slate-950/50 border border-slate-800 flex flex-col justify-between"
+            >
+              <div>
+                <h3 class="text-sm font-bold text-white mb-1">
+                  Professional Training
+                </h3>
+                <p class="text-xs text-slate-500">Addis Ababa University</p>
+              </div>
+              <span class="text-xs text-primary font-semibold mt-4 block"
+                >Credential Verified</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section
+      id="contact"
+      class="py-24 px-6 relative bg-slate-950/40 border-t border-slate-900"
+    >
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2
+            class="text-3xl sm:text-4xl font-bold font-display text-white mb-4"
+          >
+            Get In Touch
+          </h2>
+          <div
+            class="w-16 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded"
+          ></div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          <!-- Info cards column -->
+          <div class="lg:col-span-5 space-y-6 contact-me">
+            <h3 class="text-2xl font-bold font-display text-white">
+              Let's build something exceptional
+            </h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              I am highly available for full-time and Remote Full-Stack
+              engineering roles, contract-driven dashboards, data synthesis
+              collaborations, and custom AI tooling design. Let's start the
+              dialogue.
+            </p>
+
+            <!-- Contact Details cards -->
+            <div class="space-y-4 pt-4">
+              <div
+                class="p-5 rounded-2xl bg-slate-900/50 border border-slate-800 flex items-start gap-4"
+              >
+                <div class="p-3 bg-primary/10 text-primary rounded-xl">
+                  <i data-lucide="mail" class="w-6 h-6"></i>
+                </div>
+                <div>
+                  <span
+                    class="text-xs text-slate-500 uppercase tracking-wider block"
+                    >Email Me</span
+                  >
+                  <a
+                    href="mailto:nigusadmas@gmail.com"
+                    class="text-sm font-semibold text-white hover:text-accent duration-150"
+                  >
+                    nigusadmas@gmail.com
+                  </a>
+                </div>
+              </div>
+
+              <div
+                class="p-5 rounded-2xl bg-slate-900/50 border border-slate-800 flex items-start gap-4"
+              >
+                <div class="p-3 bg-accent/10 text-accent rounded-xl">
+                  <i data-lucide="map-pin" class="w-6 h-6"></i>
+                </div>
+                <div>
+                  <span
+                    class="text-xs text-slate-500 uppercase tracking-wider block"
+                    >Location</span
+                  >
+                  <span class="text-sm font-semibold text-white"
+                    >Addis Ababa, Ethiopia</span
+                  >
+                </div>
+              </div>
+
+              <div
+                class="p-5 rounded-2xl bg-slate-900/50 border border-slate-800 flex items-start gap-4"
+              >
+                <div class="p-3 bg-green-500/10 text-green-400 rounded-xl">
+                  <i data-lucide="phone" class="w-6 h-6"></i>
+                </div>
+                <div>
+                  <span
+                    class="text-xs text-slate-500 uppercase tracking-wider block"
+                    >Phone</span
+                  >
+                  <span class="text-sm font-semibold text-white"
+                    >+251-938-219719</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Live Contact Form Area -->
+          <div class="lg:col-span-7">
+            <div class="p-8 rounded-2xl glass-panel">
+              <form id="contact-form" class="space-y-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div class="space-y-2">
+                    <label
+                      for="form-name"
+                      class="text-xs uppercase tracking-wider font-bold text-slate-400"
+                      >Your Name</label
+                    >
+                    <input
+                      type="text"
+                      id="form-name"
+                      required
+                      class="w-full bg-slate-950/65 border border-slate-800 focus:border-primary px-4 py-3.5 rounded-xl text-white text-sm outline-none transition-colors"
+                      placeholder="e.g. John Doe"
+                    />
+                  </div>
+                  <div class="space-y-2">
+                    <label
+                      for="form-email"
+                      class="text-xs uppercase tracking-wider font-bold text-slate-400"
+                      >Your Email</label
+                    >
+                    <input
+                      type="email"
+                      id="form-email"
+                      required
+                      class="w-full bg-slate-950/65 border border-slate-800 focus:border-primary px-4 py-3.5 rounded-xl text-white text-sm outline-none transition-colors"
+                      placeholder="e.g. john@example.com"
+                    />
+                  </div>
+                </div>
+                <div class="space-y-2">
+                  <label
+                    for="form-subject"
+                    class="text-xs uppercase tracking-wider font-bold text-slate-400"
+                    >Subject</label
+                  >
+                  <input
+                    type="text"
+                    id="form-subject"
+                    required
+                    class="w-full bg-slate-950/65 border border-slate-800 focus:border-primary px-4 py-3.5 rounded-xl text-white text-sm outline-none transition-colors"
+                    placeholder="Project collaboration idea"
+                  />
+                </div>
+                <div class="space-y-2">
+                  <label
+                    for="form-message"
+                    class="text-xs uppercase tracking-wider font-bold text-slate-400"
+                    >Message</label
+                  >
+                  <textarea
+                    id="form-message"
+                    rows="5"
+                    required
+                    class="w-full bg-slate-950/65 border border-slate-800 focus:border-primary px-4 py-3.5 rounded-xl text-white text-sm outline-none transition-colors"
+                    placeholder="Describe the project goal or opportunity..."
+                  ></textarea>
+                </div>
+
+                <button
+                  type="submit"
+                  id="form-submit-btn"
+                  class="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-primary to-accent hover:opacity-95 text-white font-semibold py-4 px-8 rounded-2xl cursor-pointer"
+                >
+                  <span>Send Message</span>
+                  <i data-lucide="send" class="w-4 h-4"></i>
+                </button>
+              </form>
+
+              <!-- Notification Box -->
+              <div
+                id="form-response"
+                class="hidden mt-4 p-4 rounded-xl text-sm font-semibold transition-all duration-300"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-darkBg border-t border-slate-900 py-8 px-6">
+      <div
+        class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-8"
+      >
+        <!-- Left -->
+        <div class="flex items-center gap-4">
+          <!-- Profile Image -->
+          <img
+            src="assets/images/profile.jpg"
+            alt="Nigus Admas"
+            class="w-16 h-16 rounded-full object-cover border-2 border-slate-700 shadow-lg"
+          />
+
+          <!-- Name -->
+          <div>
+            <h3 class="text-xl font-bold text-white font-display">
+              Nigus Admas
+            </h3>
+            <p class="text-sm text-slate-400">Full-Stack Developer</p>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-white font-display">
+            | +251-938-219719 |
+          </h3>
+        </div>
+        <!-- Center -->
+        <p class="text-center text-sm text-slate-500">
+          | © 2026 Nigus Admas. Designed & Built with Full-Stack Portfolio
+          Engine. |
+        </p>
+
+        <!-- Right -->
+        <div class="flex items-center gap-3">
+          <!-- Github -->
+          <a
+            href="https://github.com/nigusadmas"
+            target="_blank"
+            class="w-12 h-12 rounded-xl border border-slate-700 bg-slate-900 hover:bg-primary hover:text-white transition flex items-center justify-center"
+          >
+            <i class="fa-brands fa-github text-xl"></i>
+          </a>
+
+          <!-- LinkedIn -->
+          <a
+            href="https://www.linkedin.com/in/nigus-admas/"
+            target="_blank"
+            class="w-12 h-12 rounded-xl border border-slate-700 bg-slate-900 hover:bg-primary hover:text-white transition flex items-center justify-center"
+          >
+            <i class="fa-brands fa-linkedin-in text-xl"></i>
+          </a>
+
+          <!-- Telegram -->
+          <a
+            href="https://t.me/King5261"
+            target="_blank"
+            class="w-12 h-12 rounded-xl border border-slate-700 bg-slate-900 hover:bg-primary hover:text-white transition flex items-center justify-center"
+          >
+            <i class="fa-brands fa-telegram text-xl"></i> </a
+          ><!-- Scroll to Top -->
+          <a
+            href="#home"
+            class="w-12 h-12 rounded-xl border border-slate-700 bg-slate-900 hover:bg-primary hover:border-primary transition-all duration-300 flex items-center justify-center text-slate-300 hover:text-white"
+            aria-label="Back to Top"
+          >
+            <i data-lucide="arrow-up" class="w-5 h-5"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Immersive Project Detail Modal -->
+    <div
+      id="project-modal"
+      class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-darkBg/80 backdrop-blur-md hidden"
+    >
+      <div
+        class="relative w-full max-w-2xl bg-slate-950 border border-slate-800 rounded-3xl overflow-hidden shadow-2xl"
+      >
+        <!-- Close Button -->
+        <button
+          id="modal-close-btn"
+          class="absolute top-4 right-4 z-10 p-2 rounded-full bg-slate-950/80 text-white hover:bg-slate-900 border border-slate-800 transition-colors cursor-pointer"
+          aria-label="Close Modal"
+        >
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+
+        <!-- Graphic header mock inside modal -->
+        <div
+          id="modal-mock-container"
+          class="relative h-48 sm:h-56 w-full bg-slate-900/60 overflow-hidden flex items-center justify-center border-b border-slate-800"
+        >
+          <!-- Populated programmatically -->
+        </div>
+
+        <!-- Modal Body Content -->
+        <div class="p-6 sm:p-8 space-y-4">
+          <span
+            id="modal-category"
+            class="text-xs uppercase tracking-wider font-semibold text-accent"
+          ></span>
+          <h3
+            id="modal-title"
+            class="text-2xl sm:text-3xl font-bold font-display text-white"
+          ></h3>
+          <p id="modal-desc" class="text-sm text-slate-400 leading-relaxed"></p>
+
+          <div class="pt-2">
+            <h4
+              class="text-xs uppercase tracking-wider font-bold text-slate-500 mb-2"
+            >
+              Technologies Used
+            </h4>
+            <div id="modal-tags" class="flex flex-wrap gap-2"></div>
+          </div>
+
+          <div class="flex flex-wrap gap-4 pt-4">
+            <a
+              id="modal-github"
+              href="#"
+              target="_blank"
+              class="flex-1 text-center inline-flex justify-center items-center gap-2 bg-slate-900 border border-slate-800 hover:bg-slate-800 text-white py-3 rounded-xl font-semibold text-sm"
+            >
+              <i data-lucide="github" class="w-4 h-4"></i> GitHub Repo
+            </a>
+            <a
+              id="modal-live"
+              href="#"
+              target="_blank"
+              class="flex-1 text-center inline-flex justify-center items-center gap-2 bg-gradient-to-r from-primary to-accent hover:opacity-95 text-white py-3 rounded-xl font-semibold text-sm"
+            >
+              <i data-lucide="external-link" class="w-4 h-4"></i> Live Demo
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
