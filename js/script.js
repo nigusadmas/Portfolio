@@ -66,10 +66,9 @@ document.querySelectorAll(".mobile-nav-link").forEach((link) => {
 
 // Simple Typing Simulation loop
 const words = [
-  "Full-Stack Engineer",
+  "Full-Stack Web Developer",
   "Data Scientist",
   "System Architect",
-  "Problem Solver",
 ];
 let wordIndex = 0;
 let charIndex = 0;
@@ -131,7 +130,7 @@ const skillSet = [
     icon: "server",
   },
   {
-    name: "PostgreSQL / SQLite",
+    name: "PostgreSQL / MySQL / SQLite",
     value: 80,
     category: "backend",
     icon: "database",
@@ -234,12 +233,16 @@ const projectCollection = [
         color: "bg-yellow-500/10 text-yellow-400 border-yellow-500/20",
       },
       {
-        name: "Tailwind CSS",
-        color: "bg-cyan-500/10 text-cyan-400 border-cyan-500/20",
+        name: "React",
+        color: "bg-yellow-500/10 text-yellow-400 border-yellow-500/20",
+      },
+      {
+        name: "Node",
+        color: "bg-yellow-500/10 text-yellow-400 border-yellow-500/20",
       },
     ],
     github: "https://github.com",
-    live: "https://netflix.com",
+    live: "https://github.com/nigusadmas/Netflix-Clone-Project/",
     mockup: `
             <div class="absolute inset-0 bg-black flex flex-col justify-between p-4 font-sans select-none">
               <!-- Top Header Bar -->
@@ -268,72 +271,227 @@ const projectCollection = [
   {
     id: "amazon",
     category: "web",
-    categoryLabel: "AI / NLP",
-    title: "AI NLP Sentiment Integrator",
-    desc: "Integrated NLP sentiment analysis into an Amazon-like platform to analyze product reviews and provide real-time sentiment insights.",
+    categoryLabel: "Web Application",
+
+    title: "Amazon Clone",
+
+    desc: "A fully responsive Amazon-inspired e-commerce platform featuring user authentication, product search, shopping cart, secure checkout, order management, and a modern user interface that closely replicates the Amazon shopping experience.",
+
     tags: [
       {
-        name: "Python",
-        color: "bg-blue-500/10 text-blue-400 border-blue-500/20",
-      },
-      {
-        name: "Streamlit",
+        name: "HTML",
         color: "bg-red-500/10 text-red-400 border-red-500/20",
       },
       {
-        name: "Scikit-learn",
-        color: "bg-orange-500/10 text-orange-400 border-orange-500/20",
+        name: "CSS",
+        color: "bg-blue-500/10 text-blue-400 border-blue-500/20",
       },
       {
-        name: "NLP",
+        name: "React",
+        color: "bg-cyan-500/10 text-cyan-400 border-cyan-500/20",
+      },
+      {
+        name: "Node.js",
         color: "bg-green-500/10 text-green-400 border-green-500/20",
+      },
+
+      {
+        name: "MySQL",
+        color: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
       },
     ],
     github: "https://github.com",
-    live: "https://amazon.com",
+    live: "https://github.com/nigusadmas/Amazon-clone-project",
     mockup: `
-            <div class="absolute inset-0 bg-[#0f1111] flex flex-col justify-between p-3.5 text-left font-sans select-none">
-              <!-- Header Strip Mimics -->
-              <div class="flex items-center justify-between border-b border-slate-800/80 pb-1.5 text-[8px] text-slate-400">
-                <div class="flex items-center gap-1.5">
-                  <span class="text-amber-500 font-extrabold text-xs">amazon</span>
-                  <span class="text-[6px] text-slate-500">All Today's Deals Customer Service Registry</span>
-                </div>
-                <span class="text-[6px]">EN ▼ Sign In Account & Lists ▼ Orders</span>
-              </div>
-              <!-- Data Content Layer -->
-              <div class="grid grid-cols-2 gap-2 my-auto items-center">
-                <div class="space-y-1">
-                  <h5 class="text-white text-[9px] font-bold font-display leading-tight">AI NLP Sentiment Integrator</h5>
-                  <p class="text-[6px] text-slate-400">Real-time sentiment analysis for smarter insights</p>
-                  <div class="bg-amber-500 text-[7px] font-bold text-black px-2 py-0.5 rounded text-center w-max">Get Started</div>
-                </div>
-                <!-- Mini donut gauge display box -->
-                <div class="bg-[#1a1e1e] p-2 rounded-lg border border-slate-800 space-y-1.5">
-                  <div class="flex items-center justify-between">
-                    <span class="text-[7px] text-white font-semibold">Sentiment Analysis</span>
-                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-                  </div>
-                  <!-- Doughnut Graphic in HTML -->
-                  <div class="flex items-center gap-1.5">
-                    <div class="w-6 h-6 rounded-full border-[3px] border-emerald-500 border-t-yellow-500 border-r-red-500 flex items-center justify-center">
-                      <span class="text-[5px] text-slate-300">Pos</span>
-                    </div>
-                    <div class="text-[5px] text-slate-400 space-y-0.5 leading-none">
-                      <div class="text-[6px] text-emerald-400 font-bold">Positive: 65%</div>
-                      <div>Neutral: 20%</div>
-                      <div>Negative: 20%</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Dynamic review evaluation widget footer -->
-              <div class="bg-[#1a1e1e] border border-slate-800 rounded p-1 text-[6px] text-slate-400 flex justify-between">
-                <span>Recent Analyses: <b class="text-white">"This product is amazing!"</b></span>
-                <span class="text-emerald-400 font-bold">Positive</span>
-              </div>
-            </div>
-          `,
+<div class="absolute inset-0 bg-[#eaeded] rounded-xl overflow-hidden font-sans">
+
+  <!-- Amazon Top Navbar -->
+  <div class="bg-[#131921] h-10 flex items-center px-3 justify-between">
+
+    <div class="flex items-center gap-1">
+      <span class="text-yellow-400 font-black text-sm">amazon</span>
+      <span class="text-white text-[6px]">.com</span>
+    </div>
+
+    <div class="flex-1 mx-3">
+      <div class="bg-white rounded flex items-center overflow-hidden h-5">
+
+        <span class="px-2 text-[6px] bg-gray-100 h-full flex items-center">
+          All
+        </span>
+
+        <div class="flex-1 px-2 text-[6px] text-gray-400">
+          Search products...
+        </div>
+
+        <div class="bg-[#febd69] w-6 h-full flex items-center justify-center text-[8px]">
+          🔍
+        </div>
+
+      </div>
+    </div>
+
+    <div class="flex items-center gap-3 text-white text-[6px]">
+
+      <div>
+        Hello, Sign in
+      </div>
+
+      <div>
+        Returns
+      </div>
+
+      <div class="font-bold">
+        🛒
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Yellow Menu -->
+  <div class="bg-[#232f3e] h-6 flex items-center gap-3 px-3 text-white text-[6px]">
+
+    <span>All</span>
+    <span>Today's Deals</span>
+    <span>Customer Service</span>
+    <span>Registry</span>
+    <span>Prime</span>
+
+  </div>
+
+  <!-- Main Content -->
+  <div class="p-3 grid grid-cols-2 gap-3">
+
+    <!-- Product Card -->
+    <div class="bg-white rounded-lg p-2 shadow">
+
+      <div class="h-14 bg-gray-100 rounded flex items-center justify-center">
+
+        <svg class="w-8 h-8 text-gray-300" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 2L3 7v10l9 5 9-5V7z"/>
+        </svg>
+
+      </div>
+
+      <div class="mt-2">
+
+        <div class="text-[7px] font-bold leading-tight">
+          AI Product Review Analyzer
+        </div>
+
+        <div class="text-[6px] text-gray-500 mt-1">
+          Analyze thousands of Amazon reviews using NLP.
+        </div>
+
+        <div class="flex items-center gap-1 mt-2">
+
+          <span class="text-yellow-500 text-[7px]">
+            ★★★★★
+          </span>
+
+          <span class="text-[6px] text-gray-500">
+            4.9
+          </span>
+
+        </div>
+
+        <div class="mt-2 flex items-end gap-1">
+
+          <span class="text-[8px] font-bold">
+            $29.99
+          </span>
+
+          <span class="text-[6px] line-through text-gray-400">
+            $39.99
+          </span>
+
+        </div>
+
+        <button class="mt-2 bg-[#ffd814] hover:bg-[#f7ca00] rounded-full w-full h-5 text-[6px] font-bold">
+          Add to Cart
+        </button>
+
+      </div>
+
+    </div>
+
+    <!-- AI Dashboard -->
+    <div class="bg-white rounded-lg p-2 shadow flex flex-col">
+
+      <div class="flex items-center justify-between">
+
+        <div class="text-[7px] font-bold">
+          Sentiment Analysis
+        </div>
+
+        <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+
+      </div>
+
+      <div class="flex justify-center my-2">
+
+        <div class="w-10 h-10 rounded-full border-[5px] border-green-500 border-t-yellow-400 border-r-red-500 flex items-center justify-center">
+
+          <span class="text-[5px] font-bold">
+            92%
+          </span>
+
+        </div>
+
+      </div>
+
+      <div class="space-y-1 text-[6px]">
+
+        <div class="flex justify-between">
+          <span>Positive</span>
+          <span class="text-green-600 font-bold">
+            72%
+          </span>
+        </div>
+
+        <div class="flex justify-between">
+          <span>Neutral</span>
+          <span class="text-yellow-600 font-bold">
+            18%
+          </span>
+        </div>
+
+        <div class="flex justify-between">
+          <span>Negative</span>
+          <span class="text-red-600 font-bold">
+            10%
+          </span>
+        </div>
+
+      </div>
+
+      <div class="mt-auto">
+
+        <div class="bg-gray-100 rounded p-2 mt-2">
+
+          <div class="text-[6px] font-semibold">
+            Latest Review
+          </div>
+
+          <div class="text-[5px] text-gray-600 mt-1 italic">
+            "Excellent quality, fast delivery and amazing customer support."
+          </div>
+
+          <div class="mt-1 text-green-600 text-[6px] font-bold">
+            Positive
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+`,
   },
   {
     id: "apple",
@@ -355,12 +513,16 @@ const projectCollection = [
         color: "bg-yellow-500/10 text-yellow-400 border-yellow-500/20",
       },
       {
-        name: "GSAP",
-        color: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
+        name: "React",
+        color: "bg-cyan-500/10 text-cyan-400 border-cyan-500/20",
+      },
+      {
+        name: "Node.js",
+        color: "bg-green-500/10 text-green-400 border-green-500/20",
       },
     ],
     github: "https://github.com",
-    live: "https://apple.com",
+    live: "https://github.com/nigusadmas/Apple-Page-Clone",
     mockup: `
             <div class="absolute inset-0 bg-black flex flex-col justify-between p-3.5 text-left select-none">
               <!-- Top Navbar Header Strip -->
@@ -421,7 +583,7 @@ const projectCollection = [
       },
     ],
     github: "https://github.com",
-    live: "https://kaggle.com",
+    live: "https://github.com/nigusadmas/AAU-DataScience_-_AI-Enginner-Projects/blob/main/AAU%20Training%20Project%20Directory/Phase-3-Data-Story%20Telling/Assignment/Niguse-Movie-Analysis-Part-2.ipynb",
     mockup: `
             <div class="absolute inset-0 bg-[#0c0f1d] flex flex-col justify-between p-3.5 text-left font-sans select-none">
               <div class="flex items-center justify-between border-b border-slate-800/60 pb-1.5">
@@ -483,17 +645,14 @@ const projectCollection = [
         name: "JavaScript",
         color: "bg-yellow-500/10 text-yellow-400 border-yellow-500/20",
       },
-      {
-        name: "Django",
-        color: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
-      },
+
       {
         name: "SQLite",
         color: "bg-blue-500/10 text-blue-400 border-blue-500/20",
       },
     ],
     github: "https://github.com",
-    live: "https://django-expense.com",
+    live: "https://github.com/nigusadmas/Selam-College-File/tree/master/phase-2-javascript/JS-DOM-MANIPULATION/Project-1/Expense-Tracker-App",
     mockup: `
             <div class="absolute inset-0 bg-[#f8fafc] flex flex-col justify-between p-3.5 text-left font-sans text-slate-800 select-none">
               <!-- Header Strip -->
@@ -552,24 +711,28 @@ const projectCollection = [
     desc: "A modern analytics dashboard with charts, KPIs, and interactive data visualizations.",
     tags: [
       {
-        name: "React",
+        name: "Python",
         color: "bg-blue-500/10 text-blue-400 border-blue-500/20",
       },
       {
-        name: "Recharts",
+        name: "Pandas",
         color: "bg-purple-500/10 text-purple-400 border-purple-500/20",
       },
       {
-        name: "Tailwind CSS",
+        name: "Matplotlib",
         color: "bg-cyan-500/10 text-cyan-400 border-cyan-500/20",
       },
       {
-        name: "Node.js",
-        color: "bg-green-500/10 text-green-400 border-green-500/20",
+        name: "Pyplot",
+        color: "bg-cyan-500/10 text-cyan-400 border-cyan-500/20",
+      },
+      {
+        name: "Dash",
+        color: "bg-blue-500/10 text-blue-400 border-blue-500/20",
       },
     ],
     github: "https://github.com",
-    live: "https://recharts-dash.com",
+    live: "https://github.com/nigusadmas/AAU-DataScience_-_AI-Enginner-Projects/blob/main/AAU%20Training%20Project%20Directory/Phase-3-Data-Story%20Telling/DashBoard-Project-Matplotlib.ipynb",
     mockup: `
             <div class="absolute inset-0 bg-slate-950 flex flex-col justify-between p-3.5 text-left font-sans text-slate-300 select-none">
               <div class="flex items-center justify-between border-b border-slate-900 pb-1.5">
@@ -773,67 +936,21 @@ document.getElementById("project-modal").addEventListener("click", (e) => {
  * representing Nigus Admas's professional engineering credentials.
  */
 window.downloadResume = function () {
-  const resumeContent = `================================================================
-NIGUS ADMAS - SENIOR FULL-STACK DEVELOPER & AI ARCHITECT
-================================================================
-Email: nigusadmas@gmail.com | Location: Addis Ababa, Ethiopia
-Portfolio: Live Web-based Production Stack
+  const resumeUrl = "assets/Resume/resume.pdf";
 
-----------------------------------------------------------------
-PROFESSIONAL PROFILE
-----------------------------------------------------------------
-Experienced Full-Stack Developer specializing in React UI systems,
-TypeScript optimization, Python deep analytics, and ML model design.
-Dedicated to delivering robust, elegant visual platforms and analytical code.
+  const link = document.createElement("a");
+  link.href = resumeUrl;
+  link.download = "Resume.pdf";
 
-----------------------------------------------------------------
-CORE SKILLS
-----------------------------------------------------------------
-* Frontend: React, TypeScript, Tailwind CSS, ES6+, Bootstrap
-* Backend & Databases: NodeJS, Express, SQL Schema, PostgreSQL, Django, SQLite
-* Python & AI: Pandas, NumPy, Scikit-Learn, TensorFlow, Dash
-* Tools: Git, CI/CD, AWS Deployment, Figma Architectures
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
 
-----------------------------------------------------------------
-CAREER SUMMARY
-----------------------------------------------------------------
-* Junior Full Stack Developer | Freelance Development (2025 - Present)
-  - Spearheading React modular architecture workflows.
-  - Designing visual performance tracks to boost Lighthouse scores.
-  
-* IT Trainee | Internship (2024 - 2025)
-  - Assisted in system troubleshooting, maintenance, and DB management.
-
-----------------------------------------------------------------
-EDUCATION & CREDENTIALS
-----------------------------------------------------------------
-* B.Sc. in Computer Science - Debre Markos University
-* Full-Stack Web Development - Evangadi Bootcamp Verified Track
-* Deep Learning & Neural Networks - DeepLearning.AI
-
-================================================================
-Generated and verified via Nigus Admas Digital Portfolio Workspace.
-================================================================`;
-
-  const blob = new Blob([resumeContent], {
-    type: "text/plain;charset=utf-8",
-  });
-  const downloadUrl = URL.createObjectURL(blob);
-  const hiddenAnchor = document.createElement("a");
-
-  hiddenAnchor.href = downloadUrl;
-  hiddenAnchor.download = "Nigus_Admas_Resume.txt";
-  document.body.appendChild(hiddenAnchor);
-  hiddenAnchor.click();
-
-  // Clean up resources immediately
-  document.body.removeChild(hiddenAnchor);
-  URL.revokeObjectURL(downloadUrl);
-
-  // Display positive feedback utilizing existing response pipeline
+  // Success message
   const responseBox = document.getElementById("form-response");
   if (responseBox) {
     responseBox.classList.remove("hidden", "bg-red-900/40", "text-red-300");
+
     responseBox.classList.add(
       "block",
       "bg-green-950/50",
@@ -841,37 +958,88 @@ Generated and verified via Nigus Admas Digital Portfolio Workspace.
       "border",
       "border-green-800/40",
     );
-    responseBox.textContent =
-      "Your download of 'Nigus_Admas_Resume.txt' was successfully initialized!";
+
+    responseBox.textContent = "Your resume download has started successfully!";
+
     setTimeout(() => {
       responseBox.classList.add("hidden");
-    }, 6000);
+    }, 5000);
   }
 };
 
 // Live premium contact form simulation
+
+// Initialize EmailJS
+emailjs.init({
+  publicKey: "t9I50VVohfF-FfK91",
+});
+
+// Contact Form
 const contactForm = document.getElementById("contact-form");
-contactForm.addEventListener("submit", (e) => {
+
+contactForm.addEventListener("submit", function (e) {
   e.preventDefault();
+
   const submitBtn = document.getElementById("form-submit-btn");
   const responseBox = document.getElementById("form-response");
 
   submitBtn.disabled = true;
-  submitBtn.innerHTML = `<span>Sending...</span> <i data-lucide="loader-2" class="w-4 h-4 animate-spin"></i>`;
+  submitBtn.innerHTML = `
+    <span>Sending...</span>
+    <i data-lucide="loader-2" class="w-4 h-4 animate-spin"></i>
+  `;
+
   lucide.createIcons();
 
-  setTimeout(() => {
-    responseBox.className =
-      "mt-4 p-4 rounded-xl text-sm font-semibold bg-emerald-500/15 text-emerald-400 border border-emerald-500/20";
-    responseBox.textContent = `Thanks, ${document.getElementById("form-name").value}! Your message was successfully delivered. Nigus will get back to you shortly.`;
-    responseBox.classList.remove("hidden");
+  const templateParams = {
+    name: document.getElementById("form-name").value,
+    email: document.getElementById("form-email").value,
+    title: document.getElementById("form-subject").value,
+    message: document.getElementById("form-message").value,
+  };
 
-    submitBtn.disabled = false;
-    submitBtn.innerHTML = `<span>Send Message</span> <i data-lucide="send" class="w-4 h-4"></i>`;
-    contactForm.reset();
-    lucide.createIcons();
-  }, 1500);
+  emailjs
+    .send("service_vsr9usk", "template_omo0nkj", templateParams)
+    .then(function () {
+      responseBox.className =
+        "mt-4 p-4 rounded-xl text-sm font-semibold bg-emerald-500/15 text-emerald-400 border border-emerald-500/20";
+
+      responseBox.textContent =
+        "✅ Thank you! Your message has been sent successfully.";
+
+      responseBox.classList.remove("hidden");
+
+      contactForm.reset();
+    })
+    .catch(function (error) {
+      console.error("EmailJS Error:", error);
+
+      responseBox.className =
+        "mt-4 p-4 rounded-xl text-sm font-semibold bg-red-500/15 text-red-400 border border-red-500/20";
+
+      responseBox.textContent =
+        "❌ Failed to send the message. Please try again.";
+
+      responseBox.classList.remove("hidden");
+    })
+    .finally(function () {
+      submitBtn.disabled = false;
+
+      submitBtn.innerHTML = `
+        <span>Send Message</span>
+        <i data-lucide="send" class="w-4 h-4"></i>
+      `;
+
+      lucide.createIcons();
+    });
 });
+
+// App Entry point
+window.onload = function () {
+  renderSkills("all");
+  renderProjects("all");
+  type();
+};
 
 // App Entry point init
 window.onload = function () {
