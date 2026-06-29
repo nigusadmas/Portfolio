@@ -1,9 +1,6 @@
 {
-  "homepage": "https://nigusadmas.github.io/Portfolio/",
+  "deploy": "gh-pages -d .",
   "scripts": {
     "deploy": "gh-pages -d ."
-  },
-  "devDependencies": {
-    "gh-pages": "^6.3.0"
   }
 }
